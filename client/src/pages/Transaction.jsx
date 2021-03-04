@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 
 // Components
 import TransactionList from '../components/TransactionList'
+import PieChart from '../components/Chart/PieChart'
 
 // Material UI
 import { Tabs, Tab } from '@material-ui/core'
@@ -19,10 +20,11 @@ const Transaction = () => {
             <Tab label="Month"/>
             <Tab label="Year"/>
           </Tabs>
-          <div className="budget_inner">
+          {/* <div className="budget_inner">
             <p className="budget_title">Dayly Balance</p>
             <span className="budget_value">+ 5000円</span>
-          </div>
+          </div> */}
+          <PieChart/>
           <ThemeProvider>
             <ButtonGroup fullWidth>
               <Button>All</Button>
