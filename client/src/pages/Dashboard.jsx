@@ -1,5 +1,8 @@
 import React, { Fragment } from 'react'
 
+// Components
+import TransactionList from '../components/TransactionList'
+
 const Dashboard = () => {
   return (
     <Fragment>
@@ -22,50 +25,7 @@ const Dashboard = () => {
         </section>
       </div>
       <main>
-        <section className='transaction'>
-          <div className='transaction_header'>
-            <div className='transaction_sort'>recent▼</div>
-            <div className='transaction_sort'>amount▼</div>
-          </div>
-          <ul className='transaction_lists'>
-            <li className='transaction_list'>
-              <div>
-                <h3>Travel</h3>
-                <p>In 8 hours</p>
-              </div>
-              <div className="positive">
-                + 5000 円
-              </div>
-            </li>
-            <li className='transaction_list'>
-              <div>
-                <h3>Food</h3>
-                <p>In 8 hours</p>
-              </div>
-              <div className="negative">
-                - 5000 円
-              </div>
-            </li>
-            <li className='transaction_list'>
-              <div>
-                <h3>Travel</h3>
-                <p>In 8 hours</p>
-              </div>
-              <div className="positive">
-                + 5000 円
-              </div>
-            </li>
-             <li className='transaction_list'>
-              <div>
-                <h3>Food</h3>
-                <p>In 8 hours</p>
-              </div>
-              <div className="negative">
-                - 5000 円
-              </div>
-            </li>
-          </ul>
-        </section>
+        <TransactionList/>
       </main>
     </Fragment>
   )
