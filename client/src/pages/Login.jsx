@@ -14,20 +14,20 @@ const Login = () => {
       <TextField
         label='ユーザー名'
         required="true"
-        placeholder='User Name'
+        placeholder='トミタ ケンジ'
         className={classes.input}
       />
       <TextField
-        label='Email'
+        label='メールアドレス'
         type='email'
         required="true"
+        placeholder='sample@email.com'
         className={classes.input}
       />
       <TextField
-        label='Password'
-        type='text'
-        required
-        value='Password'
+        label='パスワード'
+        type='password'
+        required='true'
         className={classes.input}
       />
     </form>
