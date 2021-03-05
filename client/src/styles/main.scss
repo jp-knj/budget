@@ -1,24 +1,19 @@
-@import './variables';
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+@import './fundation/variables';
+@import './fundation/base';
+@import './layout/layout';
 
-body {
-  background-color: white !important;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  font-family: 'Montserrat',sans-serif;
-}
+// Components
+@import './components/chart';
+@import './components/btn';
 
-.header {
-  background: linear-gradient(to right, $color-primary, $color-primary-light);
-  height: 35vh;
-  text-align: center;
-}
+// Pages
+@import './pages/dashboard';
+@import './pages/transaction';
 
-@import './dashboard';
-@import './transaction';
+.sample {
+    transform: translateY(165px);
+    color: white;
+}
+.sample1 {
+    transform: translate(140px, 205px);
+}
