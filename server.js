@@ -5,15 +5,15 @@ const colors = require('colors');
 const morgan = require('morgan');
 const connectDB = require('./config/db');
 
-
 dotenv.config({ path: './config/config.env' });
 
 connectDB();
 
+// Route Path
 const transactions = require('./routes/transactions');
+const auth = require('./routes/auth');
 
 const app = express();
-
 app.use(express.json());
 
 if (process.env.NODE_ENV === 'development') {
@@ -21,6 +21,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.use('/api/v1/transactions', transactions);
+app.use('/api/auth', auth);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
